@@ -11,10 +11,10 @@ namespace Contact_Tracing
         {
             StreamWriter folder = new StreamWriter(@"C:\Users\JOSHUA\Desktop\Contact Tracing\Info.txt", true);
 
-            folder.WriteLine("Name:" + tbox1);
-            folder.WriteLine("Contact No.:" + tbox2);
-            folder.WriteLine("Address:" + tbox3);
-            
+            folder.WriteLine("Name:" + tbox1.Text);
+            folder.WriteLine("Contact No.:" + tbox2.Text);
+            folder.WriteLine("Address:" + tbox3.Text);
+            folder.Close();
 
             
 
