@@ -16,3 +16,4 @@ C:\Users\JOSHUA\source\repos\Contact-Tracing\Contact-Tracing\obj\Debug\net6.0-wi
 C:\Users\JOSHUA\source\repos\Contact-Tracing\Contact-Tracing\obj\Debug\net6.0-windows\Contact-Tracing.pdb
 C:\Users\JOSHUA\source\repos\Contact-Tracing\Contact-Tracing\obj\Debug\net6.0-windows\Contact-Tracing.genruntimeconfig.cache
 C:\Users\JOSHUA\source\repos\Contact-Tracing\Contact-Tracing\obj\Debug\net6.0-windows\ref\Contact-Tracing.dll
+C:\Users\JOSHUA\source\repos\Contact-Tracing\Contact-Tracing\obj\Debug\net6.0-windows\Contact_Tracing.Form2.resources
