@@ -17,9 +17,15 @@ namespace Contact_Tracing
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Sbtn_Click(object sender, EventArgs e)
         {
+            StreamWriter folder = new StreamWriter(@"C:\Users\JOSHUA\Desktop\Contact Tracing\Info.txt", true);
 
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+           
         }
     }
 }

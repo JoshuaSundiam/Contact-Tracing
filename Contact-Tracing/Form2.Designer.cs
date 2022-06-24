@@ -28,22 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Sbtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Rockwell", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(267, 300);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(263, 81);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Search";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -63,26 +51,38 @@
             this.textBox1.Size = new System.Drawing.Size(361, 27);
             this.textBox1.TabIndex = 2;
             // 
+            // Sbtn
+            // 
+            this.Sbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Sbtn.Font = new System.Drawing.Font("Rockwell", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.Sbtn.Location = new System.Drawing.Point(271, 289);
+            this.Sbtn.Name = "Sbtn";
+            this.Sbtn.Size = new System.Drawing.Size(263, 81);
+            this.Sbtn.TabIndex = 3;
+            this.Sbtn.Text = "Search";
+            this.Sbtn.UseVisualStyleBackColor = false;
+            this.Sbtn.Click += new System.EventHandler(this.Sbtn_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Contact_Tracing.Properties.Resources.Screenshot_2022_06_10_2214141;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Sbtn);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
             this.Name = "Form2";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private Button button1;
         private Label label1;
         private TextBox textBox1;
+        private Button Sbtn;
     }
 }
