@@ -30,9 +30,12 @@ namespace Contact_Tracing
             folder.WriteLine("Contact No.:" + tbox2.Text);
             folder.WriteLine("Address:" + tbox3.Text);
             folder.Close();
-           
-            
 
+            MessageBox.Show("Data Received");
+            Dbox.Clear();
+            tbox1.Clear();
+            tbox2.Clear();
+            tbox3.Clear();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -58,10 +61,7 @@ namespace Contact_Tracing
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Dbox.Clear();
-            tbox1.Clear();
-            tbox2.Clear();
-            tbox3.Clear();
+            
         }
     }
 }
