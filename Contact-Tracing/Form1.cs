@@ -55,5 +55,13 @@ namespace Contact_Tracing
         {
 
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            Dbox.Clear();
+            tbox1.Clear();
+            tbox2.Clear();
+            tbox3.Clear();
+        }
     }
 }

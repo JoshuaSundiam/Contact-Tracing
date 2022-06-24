@@ -38,6 +38,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.Dbox = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +73,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(204, 251);
+            this.label3.Location = new System.Drawing.Point(203, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 24);
             this.label3.TabIndex = 2;
@@ -104,10 +105,10 @@
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(342, 334);
+            this.button1.Location = new System.Drawing.Point(342, 333);
             this.button1.Name = "button1";
             this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button1.Size = new System.Drawing.Size(209, 67);
+            this.button1.Size = new System.Drawing.Size(215, 51);
             this.button1.TabIndex = 6;
             this.button1.Text = "Enter";
             this.button1.UseVisualStyleBackColor = false;
@@ -117,10 +118,10 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(342, 432);
+            this.button2.Location = new System.Drawing.Point(342, 482);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button2.Size = new System.Drawing.Size(209, 67);
+            this.button2.Size = new System.Drawing.Size(215, 45);
             this.button2.TabIndex = 7;
             this.button2.Text = "Search";
             this.button2.UseVisualStyleBackColor = false;
@@ -145,12 +146,26 @@
             this.Dbox.Size = new System.Drawing.Size(215, 27);
             this.Dbox.TabIndex = 9;
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button3.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button3.Location = new System.Drawing.Point(342, 406);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(215, 51);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "Clear Form";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Contact_Tracing.Properties.Resources.Screenshot_2022_06_10_221414;
-            this.ClientSize = new System.Drawing.Size(887, 560);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(895, 630);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.Dbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
@@ -161,8 +176,10 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
+            this.MaximizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Contact Tracing";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,5 +197,6 @@
         private Button button2;
         private Label label4;
         private TextBox Dbox;
+        private Button button3;
     }
 }
