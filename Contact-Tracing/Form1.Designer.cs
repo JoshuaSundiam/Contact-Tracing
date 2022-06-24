@@ -36,6 +36,8 @@
             this.tbox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Dbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -44,11 +46,12 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(240, 97);
+            this.label1.Location = new System.Drawing.Point(240, 153);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name:";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -56,11 +59,12 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(163, 161);
+            this.label2.Location = new System.Drawing.Point(163, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(151, 24);
             this.label2.TabIndex = 1;
             this.label2.Text = "Contact No.:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -68,29 +72,30 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(204, 223);
+            this.label3.Location = new System.Drawing.Point(204, 251);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(110, 24);
             this.label3.TabIndex = 2;
             this.label3.Text = "Address:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // tbox1
             // 
-            this.tbox1.Location = new System.Drawing.Point(336, 96);
+            this.tbox1.Location = new System.Drawing.Point(336, 153);
             this.tbox1.Name = "tbox1";
             this.tbox1.Size = new System.Drawing.Size(215, 27);
             this.tbox1.TabIndex = 3;
             // 
             // tbox2
             // 
-            this.tbox2.Location = new System.Drawing.Point(336, 161);
+            this.tbox2.Location = new System.Drawing.Point(336, 201);
             this.tbox2.Name = "tbox2";
             this.tbox2.Size = new System.Drawing.Size(215, 27);
             this.tbox2.TabIndex = 4;
             // 
             // tbox3
             // 
-            this.tbox3.Location = new System.Drawing.Point(336, 223);
+            this.tbox3.Location = new System.Drawing.Point(336, 251);
             this.tbox3.Name = "tbox3";
             this.tbox3.Size = new System.Drawing.Size(215, 27);
             this.tbox3.TabIndex = 5;
@@ -121,12 +126,33 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(251, 100);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 24);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Date:";
+            // 
+            // Dbox
+            // 
+            this.Dbox.Location = new System.Drawing.Point(336, 100);
+            this.Dbox.Name = "Dbox";
+            this.Dbox.Size = new System.Drawing.Size(215, 27);
+            this.Dbox.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Contact_Tracing.Properties.Resources.Screenshot_2022_06_10_221414;
             this.ClientSize = new System.Drawing.Size(887, 560);
+            this.Controls.Add(this.Dbox);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tbox3);
@@ -152,5 +178,7 @@
         private TextBox tbox3;
         private Button button1;
         private Button button2;
+        private Label label4;
+        private TextBox Dbox;
     }
 }

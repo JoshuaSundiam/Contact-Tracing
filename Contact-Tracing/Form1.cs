@@ -25,6 +25,7 @@ namespace Contact_Tracing
         {
             StreamWriter folder = new StreamWriter(@"C:\Users\JOSHUA\Desktop\Contact Tracing\Info.txt", true);
 
+            folder.WriteLine("Date:" + Dbox.Text);
             folder.WriteLine("Name:" + tbox1.Text);
             folder.WriteLine("Contact No.:" + tbox2.Text);
             folder.WriteLine("Address:" + tbox3.Text);
@@ -38,6 +39,21 @@ namespace Contact_Tracing
         {
           Form2 form = new Form2();
             form.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
