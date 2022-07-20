@@ -1,12 +1,27 @@
 {
   "version": 2,
-  "dgSpecHash": "0PjvP+B0k8e8FFDUSheOPTJHq1BNkn8RuumFD9v3vdHRwo3D36/fNZRlyeqvrki+xXRRPJ78wSYo0iEAgpCGpg==",
+  "dgSpecHash": "doMp3rMRkaa+wvsehRSPwTR/7CPMWhrCOHMad2gDJkilXgJyI/bVkntXSPpzgwtGNPvFDd2WweVGhojXKhQgjA==",
   "success": true,
   "projectFilePath": "C:\\Users\\JOSHUA\\source\\repos\\Contact-Tracing\\Contact-Tracing\\Contact-Tracing.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\JOSHUA\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\JOSHUA\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\JOSHUA\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\JOSHUA\\.nuget\\packages\\qrcoder\\1.4.3\\qrcoder.1.4.3.nupkg.sha512",
+    "C:\\Users\\JOSHUA\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\JOSHUA\\.nuget\\packages\\zen.barcode.rendering.framework\\3.1.10729.1\\zen.barcode.rendering.framework.3.1.10729.1.nupkg.sha512",
     "C:\\Users\\JOSHUA\\.nuget\\packages\\zxing.net\\0.16.4\\zxing.net.0.16.4.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Zen.Barcode.Rendering.Framework 3.1.10729.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Zen.Barcode.Rendering.Framework",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }

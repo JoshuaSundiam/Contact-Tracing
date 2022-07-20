@@ -34,11 +34,15 @@
             this.infobox1 = new System.Windows.Forms.TextBox();
             this.infobox2 = new System.Windows.Forms.TextBox();
             this.infobox3 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.Enterbtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.datePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.QrBox = new System.Windows.Forms.PictureBox();
+            this.BtnQRGenerator = new System.Windows.Forms.Button();
+            this.btnSaveQR = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.QrBox)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -101,18 +105,18 @@
             this.infobox3.Size = new System.Drawing.Size(248, 27);
             this.infobox3.TabIndex = 5;
             // 
-            // button1
+            // Enterbtn
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(342, 333);
-            this.button1.Name = "button1";
-            this.button1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button1.Size = new System.Drawing.Size(215, 51);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Enter";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Enterbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Enterbtn.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Enterbtn.Location = new System.Drawing.Point(342, 333);
+            this.Enterbtn.Name = "Enterbtn";
+            this.Enterbtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Enterbtn.Size = new System.Drawing.Size(215, 51);
+            this.Enterbtn.TabIndex = 6;
+            this.Enterbtn.Text = "Enter";
+            this.Enterbtn.UseVisualStyleBackColor = false;
+            this.Enterbtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -158,6 +162,40 @@
             this.datePicker1.Size = new System.Drawing.Size(248, 27);
             this.datePicker1.TabIndex = 11;
             // 
+            // QrBox
+            // 
+            this.QrBox.Location = new System.Drawing.Point(609, 100);
+            this.QrBox.Name = "QrBox";
+            this.QrBox.Size = new System.Drawing.Size(263, 178);
+            this.QrBox.TabIndex = 12;
+            this.QrBox.TabStop = false;
+            // 
+            // BtnQRGenerator
+            // 
+            this.BtnQRGenerator.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnQRGenerator.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.BtnQRGenerator.Location = new System.Drawing.Point(609, 297);
+            this.BtnQRGenerator.Name = "BtnQRGenerator";
+            this.BtnQRGenerator.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.BtnQRGenerator.Size = new System.Drawing.Size(112, 40);
+            this.BtnQRGenerator.TabIndex = 13;
+            this.BtnQRGenerator.Text = "QR Code";
+            this.BtnQRGenerator.UseVisualStyleBackColor = false;
+            this.BtnQRGenerator.Click += new System.EventHandler(this.button1_Click_1);
+            // 
+            // btnSaveQR
+            // 
+            this.btnSaveQR.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnSaveQR.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnSaveQR.Location = new System.Drawing.Point(760, 297);
+            this.btnSaveQR.Name = "btnSaveQR";
+            this.btnSaveQR.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnSaveQR.Size = new System.Drawing.Size(112, 40);
+            this.btnSaveQR.TabIndex = 14;
+            this.btnSaveQR.Text = "Save QR Code";
+            this.btnSaveQR.UseVisualStyleBackColor = false;
+            this.btnSaveQR.Click += new System.EventHandler(this.btnSaveQR_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -165,11 +203,14 @@
             this.BackgroundImage = global::Contact_Tracing.Properties.Resources.Screenshot_2022_06_10_221414;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(895, 630);
+            this.Controls.Add(this.btnSaveQR);
+            this.Controls.Add(this.BtnQRGenerator);
+            this.Controls.Add(this.QrBox);
             this.Controls.Add(this.datePicker1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.Enterbtn);
             this.Controls.Add(this.infobox3);
             this.Controls.Add(this.infobox2);
             this.Controls.Add(this.infobox1);
@@ -180,6 +221,7 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Contact Tracing";
+            ((System.ComponentModel.ISupportInitialize)(this.QrBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,10 +235,13 @@
         private TextBox infobox1;
         private TextBox infobox2;
         private TextBox infobox3;
-        private Button button1;
+        private Button Enterbtn;
         private Button button2;
         private Label label4;
         private Button button3;
         private DateTimePicker datePicker1;
+        private PictureBox QrBox;
+        private Button BtnQRGenerator;
+        private Button btnSaveQR;
     }
 }

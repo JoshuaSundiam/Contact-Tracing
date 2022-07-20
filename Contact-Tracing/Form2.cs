@@ -33,9 +33,16 @@ namespace Contact_Tracing
 
             if ((Sbox.Text.Contains(DataBox.Text)) && (DateSet.Text.Contains(DataBox.Text)))
             {
-                bool search = Sbox.Text.Contains(DataBox.Text);
-                bool search1 = DateSet.Text.Contains(DataBox.Text);
-                SearchInfo = search();
+                string GetLine(string fileName, int line)
+                {
+
+                    {
+                        for (int i = 1; i < line; i++)
+                            read.ReadLine();
+                        return read.ReadLine();
+                    }
+                }
+
 
                 //Sbox.Text.Contains(fileData);
                 //DateSet.Text.Contains(fileData);

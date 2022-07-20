@@ -1,5 +1,6 @@
 using System;
 using System.Windows.Forms;
+using System.IO;
 using ZXing;
 using ZXing.QrCode;
 namespace Contact_Tracing
@@ -43,16 +44,8 @@ namespace Contact_Tracing
             folder.WriteLine("Address: " + infobox3.Text); 
             folder.Close();
 
-            var writer =new 
-            writer.Format = BarcodeFormat.QR_CODE;
-            var text1 = datePicker1.Text;
-            var text2 = infobox1.Text;
-            var text3 = infobox2.Text;
-            var text4 = infobox3.Text;
-            var result = writer.Write(text1, text2, text3, text4);
-            path = result;
             
-
+             
             MessageBox.Show("Data Received");
 
             
@@ -124,6 +117,18 @@ namespace Contact_Tracing
             infobox1.Clear();
             infobox2.Clear();
             infobox3.Clear();
+           
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
+            QrBox.Image = qrcode.Draw(datePicker1.Text + infobox1.Text + infobox2.Text + infobox3.Text, 50);
+        }
+
+        private void btnSaveQR_Click(object sender, EventArgs e)
+        {
+          
         }
     }
 }
