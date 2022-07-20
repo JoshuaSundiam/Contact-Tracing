@@ -40,8 +40,6 @@
             this.button3 = new System.Windows.Forms.Button();
             this.datePicker1 = new System.Windows.Forms.DateTimePicker();
             this.QrBox = new System.Windows.Forms.PictureBox();
-            this.BtnQRGenerator = new System.Windows.Forms.Button();
-            this.btnSaveQR = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.QrBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -170,32 +168,6 @@
             this.QrBox.TabIndex = 12;
             this.QrBox.TabStop = false;
             // 
-            // BtnQRGenerator
-            // 
-            this.BtnQRGenerator.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.BtnQRGenerator.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.BtnQRGenerator.Location = new System.Drawing.Point(609, 297);
-            this.BtnQRGenerator.Name = "BtnQRGenerator";
-            this.BtnQRGenerator.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.BtnQRGenerator.Size = new System.Drawing.Size(112, 40);
-            this.BtnQRGenerator.TabIndex = 13;
-            this.BtnQRGenerator.Text = "QR Code";
-            this.BtnQRGenerator.UseVisualStyleBackColor = false;
-            this.BtnQRGenerator.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // btnSaveQR
-            // 
-            this.btnSaveQR.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnSaveQR.Font = new System.Drawing.Font("Times New Roman", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSaveQR.Location = new System.Drawing.Point(760, 297);
-            this.btnSaveQR.Name = "btnSaveQR";
-            this.btnSaveQR.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.btnSaveQR.Size = new System.Drawing.Size(112, 40);
-            this.btnSaveQR.TabIndex = 14;
-            this.btnSaveQR.Text = "Save QR Code";
-            this.btnSaveQR.UseVisualStyleBackColor = false;
-            this.btnSaveQR.Click += new System.EventHandler(this.btnSaveQR_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -203,8 +175,6 @@
             this.BackgroundImage = global::Contact_Tracing.Properties.Resources.Screenshot_2022_06_10_221414;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(895, 630);
-            this.Controls.Add(this.btnSaveQR);
-            this.Controls.Add(this.BtnQRGenerator);
             this.Controls.Add(this.QrBox);
             this.Controls.Add(this.datePicker1);
             this.Controls.Add(this.button3);
@@ -241,7 +211,5 @@
         private Button button3;
         private DateTimePicker datePicker1;
         private PictureBox QrBox;
-        private Button BtnQRGenerator;
-        private Button btnSaveQR;
     }
 }

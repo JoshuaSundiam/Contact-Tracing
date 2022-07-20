@@ -38,21 +38,36 @@ namespace Contact_Tracing
             string path = @"C:\Users\JOSHUA\Desktop\Contact Tracing\Info.txt";
             StreamWriter folder = new StreamWriter(path, true);
 
+        Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
+            QrBox.Image = qrcode.Draw(datePicker1.Text + infobox1.Text + infobox2.Text + infobox3.Text, 50);
+
             folder.WriteLine("Date: " + datePicker1.Text);
             folder.WriteLine("Name: " + infobox1.Text);
             folder.WriteLine("Contact No.: " + infobox2.Text);
-            folder.WriteLine("Address: " + infobox3.Text); 
+            folder.WriteLine("Address: " + infobox3.Text);
+            folder.Write(qrcode);
             folder.Close();
 
-            
-             
+          
+
+           
+            //  string path = @"C:\Users\JOSHUA\Desktop\Contact Tracing\Info.txt";
+            //  StreamWriter folder = new StreamWriter(path, true);
+            //var writer = new BarcodeWriter();
+            //  writer.Format = BarcodeFormat.QR_CODE;
+            //  var text1 = datePicker1.Text;
+            //  var text2 = infobox1.Text;
+            //  var text3 = infobox2.Text;
+            //  var text4 = infobox3.Text;
+            //  var result = writer.Write(text1, text2, text3, text4);
+            //  path = result;
             MessageBox.Show("Data Received");
 
             
             infobox1.Clear();
             infobox2.Clear();
            infobox3.Clear();
-
+           
             
         }
         
@@ -117,13 +132,12 @@ namespace Contact_Tracing
             infobox1.Clear();
             infobox2.Clear();
             infobox3.Clear();
-           
+            QrBox.Image = null;
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-            Zen.Barcode.CodeQrBarcodeDraw qrcode = Zen.Barcode.BarcodeDrawFactory.CodeQr;
-            QrBox.Image = qrcode.Draw(datePicker1.Text + infobox1.Text + infobox2.Text + infobox3.Text, 50);
+            
         }
 
         private void btnSaveQR_Click(object sender, EventArgs e)
