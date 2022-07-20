@@ -31,14 +31,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.tbox1 = new System.Windows.Forms.TextBox();
-            this.tbox2 = new System.Windows.Forms.TextBox();
-            this.tbox3 = new System.Windows.Forms.TextBox();
+            this.infobox1 = new System.Windows.Forms.TextBox();
+            this.infobox2 = new System.Windows.Forms.TextBox();
+            this.infobox3 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.Dbox = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
+            this.datePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -80,26 +80,26 @@
             this.label3.Text = "Address:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // tbox1
+            // infobox1
             // 
-            this.tbox1.Location = new System.Drawing.Point(336, 153);
-            this.tbox1.Name = "tbox1";
-            this.tbox1.Size = new System.Drawing.Size(215, 27);
-            this.tbox1.TabIndex = 3;
+            this.infobox1.Location = new System.Drawing.Point(336, 153);
+            this.infobox1.Name = "infobox1";
+            this.infobox1.Size = new System.Drawing.Size(248, 27);
+            this.infobox1.TabIndex = 3;
             // 
-            // tbox2
+            // infobox2
             // 
-            this.tbox2.Location = new System.Drawing.Point(336, 201);
-            this.tbox2.Name = "tbox2";
-            this.tbox2.Size = new System.Drawing.Size(215, 27);
-            this.tbox2.TabIndex = 4;
+            this.infobox2.Location = new System.Drawing.Point(336, 201);
+            this.infobox2.Name = "infobox2";
+            this.infobox2.Size = new System.Drawing.Size(248, 27);
+            this.infobox2.TabIndex = 4;
             // 
-            // tbox3
+            // infobox3
             // 
-            this.tbox3.Location = new System.Drawing.Point(336, 251);
-            this.tbox3.Name = "tbox3";
-            this.tbox3.Size = new System.Drawing.Size(215, 27);
-            this.tbox3.TabIndex = 5;
+            this.infobox3.Location = new System.Drawing.Point(336, 251);
+            this.infobox3.Name = "infobox3";
+            this.infobox3.Size = new System.Drawing.Size(248, 27);
+            this.infobox3.TabIndex = 5;
             // 
             // button1
             // 
@@ -121,7 +121,7 @@
             this.button2.Location = new System.Drawing.Point(342, 482);
             this.button2.Name = "button2";
             this.button2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.button2.Size = new System.Drawing.Size(215, 45);
+            this.button2.Size = new System.Drawing.Size(215, 50);
             this.button2.TabIndex = 7;
             this.button2.Text = "Search";
             this.button2.UseVisualStyleBackColor = false;
@@ -139,13 +139,6 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Date:";
             // 
-            // Dbox
-            // 
-            this.Dbox.Location = new System.Drawing.Point(336, 100);
-            this.Dbox.Name = "Dbox";
-            this.Dbox.Size = new System.Drawing.Size(215, 27);
-            this.Dbox.TabIndex = 9;
-            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -158,6 +151,13 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
+            // datePicker1
+            // 
+            this.datePicker1.Location = new System.Drawing.Point(336, 100);
+            this.datePicker1.Name = "datePicker1";
+            this.datePicker1.Size = new System.Drawing.Size(248, 27);
+            this.datePicker1.TabIndex = 11;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -165,14 +165,14 @@
             this.BackgroundImage = global::Contact_Tracing.Properties.Resources.Screenshot_2022_06_10_221414;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(895, 630);
+            this.Controls.Add(this.datePicker1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.Dbox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.tbox3);
-            this.Controls.Add(this.tbox2);
-            this.Controls.Add(this.tbox1);
+            this.Controls.Add(this.infobox3);
+            this.Controls.Add(this.infobox2);
+            this.Controls.Add(this.infobox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -190,13 +190,13 @@
         private Label label1;
         private Label label2;
         private Label label3;
-        private TextBox tbox1;
-        private TextBox tbox2;
-        private TextBox tbox3;
+        private TextBox infobox1;
+        private TextBox infobox2;
+        private TextBox infobox3;
         private Button button1;
         private Button button2;
         private Label label4;
-        private TextBox Dbox;
         private Button button3;
+        private DateTimePicker datePicker1;
     }
 }

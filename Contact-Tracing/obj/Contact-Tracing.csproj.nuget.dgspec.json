@@ -43,6 +43,12 @@
       "frameworks": {
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "ZXing.Net": {
+              "target": "Package",
+              "version": "[0.16.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

@@ -1,8 +1,13 @@
+using System;
+using System.Windows.Forms;
+using ZXing;
+using ZXing.QrCode;
 namespace Contact_Tracing
 {
     
     public partial class Form1 : Form
     {
+       
         public Form1()
         {
             InitializeComponent();
@@ -21,33 +26,81 @@ namespace Contact_Tracing
         //	- Your program should be uploaded to github before June 25
         // 2. - Record a demo presenting your contact tracing viewer app (less than 3 min only)
         //	- Send the demo directly to my messenger before June 25
-     
+        private void Openform(object obj)
+        {
+          
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            StreamWriter folder = new StreamWriter(@"C:\Users\JOSHUA\Desktop\Contact Tracing\Info.txt", true);
 
-            folder.WriteLine("Date:" + Dbox.Text);
-            folder.WriteLine("Name:" + tbox1.Text);
-            folder.WriteLine("Contact No.:" + tbox2.Text);
-            folder.WriteLine("Address:" + tbox3.Text);
+            string path = @"C:\Users\JOSHUA\Desktop\Contact Tracing\Info.txt";
+            StreamWriter folder = new StreamWriter(path, true);
+
+            folder.WriteLine("Date: " + datePicker1.Text);
+            folder.WriteLine("Name: " + infobox1.Text);
+            folder.WriteLine("Contact No.: " + infobox2.Text);
+            folder.WriteLine("Address: " + infobox3.Text); 
             folder.Close();
 
+            var writer =new 
+            writer.Format = BarcodeFormat.QR_CODE;
+            var text1 = datePicker1.Text;
+            var text2 = infobox1.Text;
+            var text3 = infobox2.Text;
+            var text4 = infobox3.Text;
+            var result = writer.Write(text1, text2, text3, text4);
+            path = result;
+            
+
             MessageBox.Show("Data Received");
-            Dbox.Clear();
-            tbox1.Clear();
-            tbox2.Clear();
-            tbox3.Clear();
 
-            if (Dbox.Text == tbox1.Text && tbox2.Text == tbox3.Text && tbox1.Text == tbox3.Text)
-            {
-                
-            }
+            
+            infobox1.Clear();
+            infobox2.Clear();
+           infobox3.Clear();
+
+            
         }
-
+        
         private void button2_Click(object sender, EventArgs e)
         {
-          Form2 form = new Form2();
+            //StreamReader folder = new StreamReader(@"C:\Users\JOSHUA\Desktop\Contact Tracing\Info.txt", true);
+
+
+
+            //    string date = datePicker1.Text;
+            //    string name = infobox1.Text;
+            //    string cn = infobox2.Text;
+            //    string address = infobox3.Text;
+            //    StreamReader folder = new StreamReader(@"C:\Users\JOSHUA\Desktop\Contact Tracing\Info.txt", true);
+            //string path = @"C:\Users\JOSHUA\Desktop\Contact Tracing\Info.txt";
+            //    StreamReader read = new StreamReader(path);
+            //    string fileData = read.ReadToEnd();
+
+            //    if ((date.Contains(path)) && (name.Contains(path)) && (cn.Contains(path)) && (address.Contains(path)) )
+            //    {
+            //        read.ReadLine();
+            //        string line1 = date.Substring(0, date.IndexOf(path));   
+            //        string line2 = name.Substring(name.IndexOf(path) + 1);
+            //        string line3 = cn.Substring(cn.IndexOf(path) + 1);
+            //        string line4 = address.Substring(address.IndexOf(path) + 1);
+            //        line1 = line2;
+            //        line2 = line3;
+            //        line3 = line4;
+            //MessageBox.Show(line1);
+            //    string[] v = path.Split('.');
+            //    MessageBox.Show();
+            //}
+
+
+
+
+
+            Form2 form = new Form2();
             form.Show();
+
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -67,10 +120,10 @@ namespace Contact_Tracing
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            Dbox.Clear();
-            tbox1.Clear();
-            tbox2.Clear();
-            tbox3.Clear();
+           
+            infobox1.Clear();
+            infobox2.Clear();
+            infobox3.Clear();
         }
     }
 }

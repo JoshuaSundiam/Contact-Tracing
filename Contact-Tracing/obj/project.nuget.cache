@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "nsddUxUp0eRXUgYpdYD8Fkb11QyHK1K9NDogmA7Jj4gnHb3+Vu/8zEJQiyeO9z8A/r7cC4rsQ96KLCheYvhsnQ==",
+  "dgSpecHash": "0PjvP+B0k8e8FFDUSheOPTJHq1BNkn8RuumFD9v3vdHRwo3D36/fNZRlyeqvrki+xXRRPJ78wSYo0iEAgpCGpg==",
   "success": true,
   "projectFilePath": "C:\\Users\\JOSHUA\\source\\repos\\Contact-Tracing\\Contact-Tracing\\Contact-Tracing.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\JOSHUA\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\JOSHUA\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\JOSHUA\\.nuget\\packages\\zxing.net\\0.16.4\\zxing.net.0.16.4.nupkg.sha512"
+  ],
   "logs": []
 }
