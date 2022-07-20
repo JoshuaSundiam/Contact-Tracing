@@ -135,14 +135,16 @@ namespace Contact_Tracing
             QrBox.Image = null;
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void Qrbtn_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void btnSaveQR_Click(object sender, EventArgs e)
-        {
-          
+            string location = @"C:\Users\JOSHUA\Desktop\Contact Tracing\Info.txt";
+            var dialog = new SaveFileDialog();
+            dialog.InitialDirectory = location;
+            dialog.Filter = "PNG| *.png";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                QrBox.Image.Save(dialog.FileName);
+            }
         }
     }
 }

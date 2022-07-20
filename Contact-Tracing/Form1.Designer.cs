@@ -40,6 +40,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.datePicker1 = new System.Windows.Forms.DateTimePicker();
             this.QrBox = new System.Windows.Forms.PictureBox();
+            this.Qrbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.QrBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -168,6 +169,19 @@
             this.QrBox.TabIndex = 12;
             this.QrBox.TabStop = false;
             // 
+            // Qrbtn
+            // 
+            this.Qrbtn.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Qrbtn.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Qrbtn.Location = new System.Drawing.Point(648, 296);
+            this.Qrbtn.Name = "Qrbtn";
+            this.Qrbtn.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Qrbtn.Size = new System.Drawing.Size(179, 40);
+            this.Qrbtn.TabIndex = 13;
+            this.Qrbtn.Text = "Save QR Code";
+            this.Qrbtn.UseVisualStyleBackColor = false;
+            this.Qrbtn.Click += new System.EventHandler(this.Qrbtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -175,6 +189,7 @@
             this.BackgroundImage = global::Contact_Tracing.Properties.Resources.Screenshot_2022_06_10_221414;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(895, 630);
+            this.Controls.Add(this.Qrbtn);
             this.Controls.Add(this.QrBox);
             this.Controls.Add(this.datePicker1);
             this.Controls.Add(this.button3);
@@ -211,5 +226,6 @@
         private Button button3;
         private DateTimePicker datePicker1;
         private PictureBox QrBox;
+        private Button Qrbtn;
     }
 }
